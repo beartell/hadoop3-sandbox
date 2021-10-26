@@ -1,0 +1,5 @@
+version: "3"
+
+services:
+    beartell-hadoopv3: 
+      image: xentnex/hadoop:v3.0.0
