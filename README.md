@@ -5,9 +5,10 @@
     $ docker pull xentnex/hadoop:v3.0.0
     $ docker run -td <image_id>
     $ docker exec -ti <container_id> /bin/bash
-#### 1.2 Play Ground Üzerinden Çalıştırılır
-    https://labs.play-with-docker.com/
-    (daha sonra 1.1 maddeleri çalıştırılacak)
+#### 1.2 Vagrant
+    $ git clone https://github.com/beartell/hadoop3-sandbox
+    $ cd hadoop3-sandbox
+    $ vagrant up
 ### 2. Imaj'ın İçinde Bulunan Hadoop Ekosistemine Ait Yazılımlar Çalıştırılabilir. <h2> 
 #### 2.1 HBase
     $ hbase version
