@@ -1,13 +1,15 @@
 # Hadoop v3 - Docker Sandbox
 
-### 1. Docker Üzerinden Imaj Dosyası İndirilir <h2>
+### 1. Docker Image <h2>
+#### 1.1 Imaj İndirilir, Çalıştırılır <h2>
     $ docker pull xentnex/hadoop:v3.0.0
-### 2. Docker Imajı Çalıştırılır. <h2> 
     $ docker run -td <image_id>
-### 3. Çalıştırılan Imaj'ın Container'ina Terminal Bağlantısı Sağlanır. <h2> 
     $ docker exec -ti <container_id> /bin/bash
-### 4. Imaj'ın İçinde Bulunan Hadoop Ekosistemine Ait Yazılımlar Çalıştırılabilir. <h2> 
-#### 4.1 HBase
+#### 1.2 Play Ground Üzerinden Çalıştırılır
+    https://labs.play-with-docker.com/
+    (daha sonra 1.1 maddeleri çalıştırılacak)
+### 2. Imaj'ın İçinde Bulunan Hadoop Ekosistemine Ait Yazılımlar Çalıştırılabilir. <h2> 
+#### 2.1 HBase
     $ hbase version
     OpenJDK 64-Bit Server VM warning: Using incremental CMS is deprecated and will likely be removed in a future release
     SLF4J: Class path contains multiple SLF4J bindings.
@@ -35,7 +37,7 @@
     Took 0.0020 seconds
     hbase(main):001:0>
   
-#### 4.2 HDFS
+#### 2.2 HDFS
     $ hdfs version
     Hadoop 3.2.2
     Source code repository https://gitbox.apache.org/repos/asf/bigtop.git -r 09d20bdcdb9602383288cda766207fcc1b79592d
@@ -54,7 +56,7 @@
     drwxr-xr-x   - hdfs  hadoop          0 2021-10-25 14:51 /user
     drwxr-xr-x   - hdfs  hadoop          0 2021-10-25 14:51 /var
 
-#### 4.3 Hive
+#### 2.3 Hive
     SLF4J: Class path contains multiple SLF4J bindings.
     SLF4J: Found binding in [jar:file:/usr/lib/hive/lib/log4j-slf4j-impl-2.10.0.jar!/org/slf4j/impl/StaticLoggerBinder.class]
     SLF4J: Found binding in [jar:file:/usr/lib/hadoop/lib/slf4j-log4j12-1.7.25.jar!/org/slf4j/impl/StaticLoggerBinder.class]
@@ -66,7 +68,7 @@
     Hive Session ID = 400419ee-492e-40b1-8825-8af1af4352e1
     Hive-on-MR is deprecated in Hive 2 and may not be available in the future versions. Consider using a different execution engine (i.e. spark, tez) or using Hive 1.X releases.
     hive>
-#### 4.4 Spark
+#### 2.4 Spark
     $ pyspark --master yarn
     Python 2.7.18 (default, Mar  8 2021, 13:02:45) 
     [GCC 9.3.0] on linux2
@@ -91,9 +93,9 @@
     Using Python version 2.7.18 (default, Mar  8 2021 13:02:45)
     SparkSession available as 'spark'.
     >>>
-#### 4.5 Flink
+#### 2.5 Flink
     $ flink --version
     Version: 1.11.3, Commit ID: 09d20bd
-#### 4.6 Kafka
+#### 2.6 Kafka
     $ kafka-topics.sh --version
     2.4.1 (Commit:unknown)
