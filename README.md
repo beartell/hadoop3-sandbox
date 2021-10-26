@@ -1,14 +1,18 @@
 # Hadoop v3 - Docker Sandbox
 
 ### 1. Docker Image <h2>
-#### 1.1 Imaj İndirilir, Çalıştırılır <h2>
+#### 1.1 (Opsiyon a) Docker Imajı İndirilir, Çalıştırılır <h2>
     $ docker pull xentnex/hadoop:v3.0.0
     $ docker run -td <image_id>
     $ docker exec -ti <container_id> /bin/bash
-#### 1.2 Vagrant
+#### 1.2 (Opsiyon b) Vagrant ile Çalıştırılır <h2>
     $ git clone https://github.com/beartell/hadoop3-sandbox
     $ cd hadoop3-sandbox
     $ vagrant up
+#### 1.3 (Opsiyon c) Docker-compose ile Çalıştırılır <h2>
+    $ git clone https://github.com/beartell/hadoop3-sandbox
+    $ docker-compose up -d
+    $ docker exec -ti <container_id> /bin/bash
 ### 2. Imaj'ın İçinde Bulunan Hadoop Ekosistemine Ait Yazılımlar Çalıştırılabilir. <h2> 
 #### 2.1 HBase
     $ hbase version
